@@ -4,7 +4,7 @@ resource "aws_vpc" "tfdemo" {
   enable_dns_hostnames = true
 
   tags = {
-    name        = "${var.prefix}-vpc-${var.region}"
+    Name        = "${var.prefix}-vpc-${var.region}"
     environment = "Production"
   }
 }
@@ -14,7 +14,7 @@ resource "aws_subnet" "tfdemo" {
   cidr_block = var.subnet_prefix
 
   tags = {
-    name = "${var.prefix}-subnet"
+    Name = "${var.prefix}-subnet"
   }
 }
 #Internet gateway
